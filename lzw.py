@@ -1,7 +1,7 @@
 
 dict = {}
 ns = int(input('enter the no of symbols :'))
-print('enter the no of sample table symbols :')
+print('enter the sample table symbols :')
 i=0
 while(i<ns):
     sy = input()
@@ -48,12 +48,14 @@ while(i<n):
         else:
             f = 1
             print('f=1')
-    ne = string[i:l]
-    eo = pos(i,l-1)
-    dict[ne] = [count, eo]
-    count = count + 1
-    if(l != 1):
-        i = i + l - 1
+    if(f==1):
+        ne = string[i:l]
+        eo = pos(i,l-1)
+        dict[ne] = [count, eo]
+        count = count + 1
+
+    if(l != i + 1):
+        i = l - 1
     else:
         i = i + 1
 
