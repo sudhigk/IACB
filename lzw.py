@@ -54,11 +54,9 @@ while(i<n):
         dict[ne] = [count, eo]
         count = count + 1
 
-    if(l != i + 1):
-        i = l - 1
-    else:
-        i = i + 1
 
+    i = l - 1
 
+print('RESULT')
 print(dict)
 
