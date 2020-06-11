@@ -12,11 +12,11 @@ sum = 0
 outc = np.chararray((26), unicode=True)
 outn = np.zeros((26))
 rel = np.chararray((26,26), unicode=True)
-res = np.zeros((26))
+
 r = np.chararray((26,10), unicode=True)
 
 
-
+#counting letters
 
 st = input("Enter the string : ")
 for ch in st:
@@ -26,9 +26,12 @@ for ch in st:
             break
     probn[i] =  probn[i] + 1
 
+#probability calculation
 
 for i in range(0,26):
     probn[i] = probn[i] / sum
+
+#copied to new datastructure probn -> outn , probc -> outc
 
 j = 0
 for i in range(0,26):
@@ -68,7 +71,7 @@ def result():
         for i in range(0,26):
             if(rel[i][0] == ch1):
                 break
-        res[i] = (res[i] * 10) + 1
+
 
         for z in range(0, 10):
             if (r[i][z] == ''):
@@ -84,7 +87,7 @@ def result():
                 for k in range(0,26):
                     if(rel[k][0] == ch):
                         break
-                res[k] = (res[k] * 10) + 1
+
 
                 for z in range(0, 10):
                     if (r[k][z] == ''):
@@ -98,7 +101,7 @@ def result():
         for h in range(0,26):
             if(rel[h][0] == ch2):
                 break
-        res[h] = (res[h] * 10) + 0
+
 
         for z in range(0, 10):
             if (r[h][z] == ''):
@@ -127,7 +130,7 @@ def result():
                 for k in range(0,26):
                     if(rel[k][0] == ch):
                         break
-                res[k] = (res[k] * 10) + 0
+
 
                 for z in range(0, 10):
                     if (r[k][z] == ''):
